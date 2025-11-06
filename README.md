@@ -45,10 +45,17 @@ todo-app-with-email-reminders
 │  
 └─ todo-backend → Express API + MongoDB + Cron  
 
+## Setup Instructions (Local Development)
+
+### 1) Clone repo
+
+    ```bash
+    git clone https://github.com/ChetanPatwardhan/Todo-App-with-Email-Reminders.git
+    cd Todo-App-with-Email-Reminders
 
 ## 🛠 How to Run Locally
 
-### 1) Backend
+### 2) Backend
 
 
      ```bash
@@ -60,7 +67,7 @@ Backend will run at:
 
  http://localhost:4000
 
-### 2) Frontend
+### 3) Frontend
      ```bash
     cd todo-backend
     npm install
