@@ -103,5 +103,15 @@ Subject: Reminder: Meeting with Client
 Your task is due soon.  
 -----------------------  
 ## 🖼 Screenshots
+
+### Sign up
+![Home Screen](./Screenshots/Sign-up.png)
+
 ### Home Page/ Login
-![Home](./screenshots/login.png)
+![Home Screen](./Screenshots/log-in.png)
+
+### Add Task 
+![Home Screen](./Screenshots/Add-task.png)
+
+### Reminder Behavior
+![Home Screen](./Screenshots/Reminder-Behavior.png)
