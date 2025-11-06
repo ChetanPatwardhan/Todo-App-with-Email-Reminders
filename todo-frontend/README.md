@@ -1,16 +1,99 @@
-# React + Vite
+# Todo App with Email Reminders
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack MERN based Todo App where users can create tasks with due date & time, and the system will send (simulated) email reminders before the task is due.
 
-Currently, two official plugins are available:
+> Author: **Chetan Patwardhan**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React (Vite)
+- Tailwind CSS
+- Axios (API calls)
 
-## Expanding the ESLint configuration
+### Backend
+- Node.js + Express
+- MongoDB + Mongoose
+- JWT Authentication
+- Cron Job for sending reminders
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Email Reminders
+- Email sending is simulated (logged in console)
+- Can later be replaced with Gmail / SendGrid / SES
+
+---
+
+## 🔐 Features
+
+| Feature | Status |
+|--------|--------|
+| User Signup / Login (JWT) | ✅ |
+| Add / Edit / Delete Tasks | ✅ |
+| Due Date + Time for tasks | ✅ |
+| Simulated Email Reminder before due time | ✅ |
+| Task list filtering by status | ✅ |
+
+---
+
+## 📁 Project Structure
+
+todo-app-with-email-reminders  
+│  
+├─ todo-frontend → React app (UI)  
+│  
+└─ todo-backend → Express API + MongoDB + Cron  
+
+
+## 🛠 How to Run Locally
+
+### 1) Backend
+
+
+     ```bash
+    cd todo-backend
+    npm install
+    npm run dev
+     
+Backend will run at:
+
+ http://localhost:4000
+
+### 2) Frontend
+     ```bash
+    cd todo-backend
+    npm install
+    npm run dev
+
+Frontend will run at: 
+
+    http://localhost:5173
+
+🔧 Environment Variables 
+
+    VITE_API_URL=http://localhost:4000/api
+
+
+Backend .env
+
+    PORT=4000
+    MONGO_URI=YOUR_MONGODB_CONNECTION
+    JWT_SECRET=YOUR_SECRET_VALUE
+    REMINDER_MINUTES=1
+
+
+📬 Reminder Behavior
+
+A cron job runs every minute.
+
+If a task is within REMINDER_MINUTES before due time, backend prints an email log in console.
+
+Example of simulated email:  
+---[SIMULATED EMAIL]---  
+To: user@example.com  
+Subject: Reminder: Meeting with Client  
+Your task is due soon.  
+-----------------------  
+## 🖼 Screenshots
+
